@@ -1,17 +1,12 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 0ffe73444aa78d467f3de924890879f661e640b9
 from Recipe import Recipe
 from Category import Category
 weetbix = Recipe("weetbix", "img1", "weetbix, milk, spoon", "the pope", "1901", "6/10", "3, 1, 1", "0.5", "milk > bix > bowl > spoon", "bix", "1", "0", "1", "1", "bix of weet, add soggy", [])
-weetbix.printRecipe()
 
-gary = Recipe("gary", "gary.jpg", "water, brainpower, dumb", "Ann And Allen", "2004", "3/10", "10, 1, 1000", "21 years", "run and hide", "non_bix", "2", "Unknown", "1", "1", "gary, add soggy", [])
-gary.printRecipe()
+r1 = Recipe("bob", "tj.jpg", "water", "Apple", "2006", "3/10", "10, 1, 1000", "21 years", "run and hide", "non_bix", "2", "Unknown", "1", "1", "desc", [])
 
-bix = Category("bix", "1", [])
-bix.printCategories()
+c1 = Category("cat1", "1", [])
 
-bix.add(gary)
-print(bix)
+c1.addRecipe(r1)
+
+print(c1)

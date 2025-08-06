@@ -19,10 +19,10 @@ class Category:
         self.__recipes.append(recipe)
 
     def addRecipe(self, recipe):
-        self.__recipes = self.__recipes.append(recipe)
+        self.__recipes.append(recipe)
 
     def __repr__(self):
-        print(f"Category {self.__name} has the following associated recipes: {self.__recipes} ")
+        return(f"Category {self.__name} has the following associated recipes: {self.__recipes} ")
 
     def __str__(self):
-        print(f"Category {self.__name} has the following associated recipes: {self.__recipes} ")
+        return(f"Category {self.__name} has the following associated recipes: {self.__recipes} ")
