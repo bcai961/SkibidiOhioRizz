@@ -20,7 +20,14 @@ class Recipe:
 # except reviews
 
     def printRecipe(self):
-        print(f"<Recipe {self.__name} with id: {self.__id} was created by {self.__author} on {self.__date}.")
+        print(f"<Recipe {self.__name} with id: {self.__id} was created by {self.__author} on {self.__date}.>")
 
     def __repr__(self):
         print(f"{self.__name}: ")
+
+    def addRecipe(self, recipe: "Recipe"):
+        check_recipe = isinstance(recipe, Recipe)
+        if not check_recipe:
+            raise TypeError("Recipe must be of type Recipe")
+        else:
+            self.recipe = recipe
