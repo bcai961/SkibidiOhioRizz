@@ -1,7 +1,3 @@
-<<<<<<< Updated upstream
-from recipe import Recipe
-from category import Category
-=======
 from Recipe import Recipe
 from Category import Category
 
@@ -10,4 +6,4 @@ weetbix.printRecipe()
 
 gary = Recipe("gary", "gary.jpg", "water, brainpower, dumb", "Ann And Allen", "2004", "3/10", "10, 1, 1000", "21 years", "run and hide", "bix", "2", "Unknown", "1", "1", "gary, add soggy", [])
 gary.printRecipe()
->>>>>>> Stashed changes
+
