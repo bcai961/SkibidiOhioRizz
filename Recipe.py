@@ -20,10 +20,21 @@ class Recipe:
 # except reviews
 
     def printRecipe(self):
-        print(f"<Recipe {self.__name} with id: {self.__id} was created by {self.__author} on {self.__date}.>\n")
-
-    def printName(self):
-        print(self.__name)
+        print(f"<Recipe {self.__name} with id: {self.__id} was created by {self.__author} on {self.__date}.>")
 
     def __repr__(self):
         print(f"{self.__name}: ")
+
+    # both the name setter and the name getter have to be called the same thing
+
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, name: "Recipe"):
+        check_recipe = isinstance(name, Recipe)
+        if not check_recipe:
+            raise TypeError("Recipe must be of type Recipe")
+        else:
+            self.__name = name

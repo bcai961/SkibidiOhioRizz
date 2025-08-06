@@ -1,6 +1,6 @@
 
-from recipe import Recipe
-from category import Category
+from Recipe import Recipe
+from Category import Category
 weetbix = Recipe("weetbix", "img1", "weetbix, milk, spoon", "the pope", "1901", "6/10", "3, 1, 1", "0.5", "milk > bix > bowl > spoon", "bix", "1", "0", "1", "1", "bix of weet, add soggy", [])
 weetbix.printRecipe()
 
@@ -10,13 +10,5 @@ gary.printRecipe()
 bix = Category("bix", "1", [])
 bix.printCategories()
 
-non_bix = Category("nonbix", "2", [])
-non_bix.printCategories()
-
-if isinstance(weetbix, Recipe):
-    bix.addRecipe(weetbix)
-    bix.printRecipes()
-
-if isinstance(gary, Recipe):
-    non_bix.addRecipe(gary)
-    non_bix.printRecipes()
+bix.add(gary)
+print(bix)

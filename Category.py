@@ -1,3 +1,5 @@
+from Recipe import Recipe
+
 class Category:
     def __init__(self, name, id, recipes):
         self.__name = name
@@ -8,11 +10,19 @@ class Category:
     def printCategories(self):
         print(f"<Category {self.__id}: {self.__name}>")
 
-    def addRecipe(self, recipe):
+    @property
+    def recipe(self):
+        return self.__recipes
+
+    @recipe.setter
+    def recipe(self, recipe):
         self.__recipes.append(recipe)
 
-    def printRecipes(self):
-        print(f"{self.__name}: ")
-        for pi in self.__recipes:
-            pi.printName()
-        print("\n")
+    def addRecipe(self, recipe):
+        self.__recipes = self.__recipes.append(recipe)
+
+    def __repr__(self):
+        print(f"Category {self.__name} has the following associated recipes: {self.__recipes} ")
+
+    def __str__(self):
+        print(f"Category {self.__name} has the following associated recipes: {self.__recipes} ")
