@@ -25,9 +25,17 @@ class Recipe:
     def __repr__(self):
         print(f"{self.__name}: ")
 
-    def addRecipe(self, recipe: "Recipe"):
-        check_recipe = isinstance(recipe, Recipe)
+    # both the name setter and the name getter have to be called the same thing
+
+    @property
+
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, name: "Recipe"):
+        check_recipe = isinstance(name, Recipe)
         if not check_recipe:
             raise TypeError("Recipe must be of type Recipe")
         else:
-            self.recipe = recipe
+            self.__name = name
