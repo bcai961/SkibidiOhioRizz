@@ -20,7 +20,7 @@ class Recipe:
 # except reviews
 
     def printRecipe(self):
-        print(f"<Recipe {self.__name} with id: {self.__id} was created by {self.__author} on a date.")
+        print(f"<Recipe {self.__name} with id: {self.__id} was created by {self.__author} on {self.__date}.")
 
     def __repr__(self):
-        print(f"{__name}")
+        print(f"{self.__name}: ")

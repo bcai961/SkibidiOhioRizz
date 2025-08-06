@@ -7,3 +7,4 @@ class Category:
 
     def printCategories(self):
         print(f"<Category {self.__id}: {self.__name}>")
+
