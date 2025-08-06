@@ -9,3 +9,7 @@ class Recipe:
         self.__cookTime = cookingTime
         self.__category = category
         self.__other = other
+
+    def printRecipe(self):
+        print(f"<Recipe {self.__name} with id: {self.__id} was created by {self.__author} on a date.")
+
