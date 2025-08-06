@@ -35,7 +35,7 @@ class Recipe:
     @name.setter
     def name(self, name: "Recipe"):
         check_recipe = isinstance(name, Recipe)
-        if not check_recipe:
+        if check_recipe == False:
             raise TypeError("Recipe must be of type Recipe")
         else:
             self.__name = name

@@ -6,10 +6,6 @@ class Category:
         self.__id = id
         self.__recipes = []
 
-
-    def printCategories(self):
-        print(f"<Category {self.__id}: {self.__name}>")
-
     @property
     def recipe(self):
         return self.__recipes
